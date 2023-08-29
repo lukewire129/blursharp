@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlurSharp", "BlurSharp\BlurSharp.csproj", "{79119DE9-7A9B-4165-91C5-9B0D1A5027AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79119DE9-7A9B-4165-91C5-9B0D1A5027AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79119DE9-7A9B-4165-91C5-9B0D1A5027AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79119DE9-7A9B-4165-91C5-9B0D1A5027AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79119DE9-7A9B-4165-91C5-9B0D1A5027AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12FDC8E1-BB41-4D1D-802F-4DA1240DC51C}
+	EndGlobalSection
+EndGlobal
