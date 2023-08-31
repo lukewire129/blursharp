@@ -1,4 +1,4 @@
-﻿using DarkSkinWindow.UI.Views;
+﻿using BlurSharp.Support.UI.Units;
 using System.Windows;
 
 namespace BlurSharp.Forms.UI.Views

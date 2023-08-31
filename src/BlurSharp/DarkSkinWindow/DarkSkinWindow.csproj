@@ -10,8 +10,4 @@
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
-  </ItemGroup>
-
 </Project>
