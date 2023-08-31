@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp", "BlurSharp\Blur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp.Forms", "BlurSharp.Forms\BlurSharp.Forms.csproj", "{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkSkinWindow", "..\..\..\DarkSkinWindow\DarkSkinWindow\DarkSkinWindow.csproj", "{344C38C2-8449-4CF3-AE10-45F088E2B6E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkSkinWindow", "Skin\DarkSkinWindow\DarkSkinWindow\DarkSkinWindow.csproj", "{26EDB386-E113-43A5-9E18-16BD8DCBFF6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{344C38C2-8449-4CF3-AE10-45F088E2B6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{344C38C2-8449-4CF3-AE10-45F088E2B6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{344C38C2-8449-4CF3-AE10-45F088E2B6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{344C38C2-8449-4CF3-AE10-45F088E2B6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26EDB386-E113-43A5-9E18-16BD8DCBFF6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26EDB386-E113-43A5-9E18-16BD8DCBFF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26EDB386-E113-43A5-9E18-16BD8DCBFF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26EDB386-E113-43A5-9E18-16BD8DCBFF6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
