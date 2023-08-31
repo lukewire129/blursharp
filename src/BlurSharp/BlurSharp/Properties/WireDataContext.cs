@@ -1,4 +1,6 @@
-﻿using Jamesnet.Wpf.Global.Location;
+﻿using BlurSharp.Forms.Local.ViewModels;
+using BlurSharp.Forms.UI.Views;
+using Jamesnet.Wpf.Global.Location;
 
 namespace BlurSharp.Properties
 {
@@ -8,7 +10,7 @@ namespace BlurSharp.Properties
         {
             //items.Register<LocationContent, LocationContentViewModel> ();
             //items.Register<MainContent, MainContentViewModel> ();
-            //items.Register<ExplorerWindow, ExplorerViewModel> ();
+            items.Register<BlurSharpWindow, BlurSharpWindowViewModel> ();
         }
     }
 }
