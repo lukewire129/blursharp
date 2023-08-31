@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlurSharp", "BlurSharp\BlurSharp.csproj", "{FF992BB0-4B2C-4421-A7F8-5B23C8F1AB2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp", "BlurSharp\BlurSharp.csproj", "{FF992BB0-4B2C-4421-A7F8-5B23C8F1AB2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp.Forms", "BlurSharp.Forms\BlurSharp.Forms.csproj", "{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkSkinWindow", "..\..\..\DarkSkinWindow\DarkSkinWindow\DarkSkinWindow.csproj", "{687A6810-BA16-42ED-B36F-2029DA0A5E48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{FF992BB0-4B2C-4421-A7F8-5B23C8F1AB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF992BB0-4B2C-4421-A7F8-5B23C8F1AB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF992BB0-4B2C-4421-A7F8-5B23C8F1AB2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9DF80F-7C8E-4B97-90AF-9D7EFEB626F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{687A6810-BA16-42ED-B36F-2029DA0A5E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{687A6810-BA16-42ED-B36F-2029DA0A5E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{687A6810-BA16-42ED-B36F-2029DA0A5E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{687A6810-BA16-42ED-B36F-2029DA0A5E48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
