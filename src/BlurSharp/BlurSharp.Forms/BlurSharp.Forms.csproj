@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\DarkSkinWindow\DarkSkinWindow\DarkSkinWindow.csproj" />
     <ProjectReference Include="..\Skin\DarkWindow\DarkWindow\DarkWindow.Skin.csproj" />
   </ItemGroup>
 

@@ -5,6 +5,13 @@
                     xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf">
     <Style TargetType="{x:Type views:BlurSharpWindow}"
            BasedOn="{StaticResource {x:Type based:DarkWindow}}">
+        <Setter Property="Title">
+            <Setter.Value>
+                <Border Padding="5">
+                    <TextBlock Text="BlurSharp" Foreground="White" FontSize="20" FontWeight="Bold"/>
+                </Border>
+            </Setter.Value>
+        </Setter>
         <Setter Property="Content">
             <Setter.Value>
                 <james:JamesRegion RegionName="MainRegion"/>
