@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
+    <Folder Include="UI\Units\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlurSharp.Core\BlurSharp.Core.csproj" />
-    <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
   </ItemGroup>
 
 </Project>

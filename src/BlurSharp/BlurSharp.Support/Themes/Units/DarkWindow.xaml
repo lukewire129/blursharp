@@ -32,7 +32,7 @@
                             BorderThickness="{TemplateBinding BorderThickness}"
                             UseLayoutRounding="{TemplateBinding UseLayoutRounding}"
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Padding="0">
-                        <james:JamesGrid Rows="Auto, *">
+                        <james:JamesGrid Rows="Auto, *" Columns="*">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />

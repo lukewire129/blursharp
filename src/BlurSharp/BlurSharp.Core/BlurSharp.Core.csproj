@@ -2,17 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\BlurSharp.Core\BlurSharp.Core.csproj" />
-    <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
   </ItemGroup>
 
 </Project>

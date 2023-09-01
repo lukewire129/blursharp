@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Themes\Units\" />
+    <Folder Include="UI\Units\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
+    <PackageReference Include="VerticalTabControl" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BlurSharp.Core\BlurSharp.Core.csproj" />
-    <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
   </ItemGroup>
 
 </Project>

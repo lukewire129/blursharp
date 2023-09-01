@@ -1,5 +1,8 @@
 ﻿using BlurSharp.Forms.Local.ViewModels;
 using BlurSharp.Forms.UI.Views;
+using BlurSharp.Main.Local.ViewModels;
+using BlurSharp.Main.UI.Views;
+using BlurSharp.Setting.Local.ViewModels;
 using Jamesnet.Wpf.Global.Location;
 
 namespace BlurSharp.Properties
@@ -8,9 +11,10 @@ namespace BlurSharp.Properties
     {
         protected override void Match(ViewModelLocatorCollection items)
         {
-            //items.Register<LocationContent, LocationContentViewModel> ();
-            //items.Register<MainContent, MainContentViewModel> ();
             items.Register<BlurSharpWindow, BlurSharpWindowViewModel> ();
+            items.Register<MainContent, MainContentViewModel> ();
+            items.Register<SettingContent, SettingContentViewModel> ();
+            items.Register<ProtectContent, ProtectContentViewModel> ();
         }
     }
 }
