@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:units="clr-namespace:BlurSharp.Main.UI.Views"
+                    xmlns:views="clr-namespace:BlurSharp.Main.UI.Views"
                     xmlns:vtc="clr-namespace:VerticalTabControl.UI.Units;assembly=VerticalTabControl"
                     xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf">
     <DataTemplate x:Key="TabHeader">
@@ -11,10 +11,10 @@
     <DataTemplate x:Key="TabContent">
         <james:JamesContent Content="{Binding Content}"/>
     </DataTemplate>
-    <Style TargetType="{x:Type units:MainContent}">
+    <Style TargetType="{x:Type views:MainContent}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:MainContent}">
+                <ControlTemplate TargetType="{x:Type views:MainContent}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
