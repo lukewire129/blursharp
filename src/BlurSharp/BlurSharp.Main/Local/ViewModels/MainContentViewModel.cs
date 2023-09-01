@@ -18,6 +18,11 @@ namespace BlurSharp.Main.Local.ViewModels
             {
                 new ContentModel ()
                 {
+                    Name = "PROJECT",
+                    Content = this._containerProvider.Resolve<IViewable> ("ProjectContent")
+                },
+                new ContentModel ()
+                {
                     Name = "OPTION",
                     Content = this._containerProvider.Resolve<IViewable> ("SettingContent")
                 },

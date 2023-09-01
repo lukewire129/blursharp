@@ -1,7 +1,7 @@
 ﻿using Jamesnet.Wpf.Controls;
 using System.Windows;
 
-namespace BlurSharp.Main.UI.Views
+namespace BlurSharp.Protect.UI.Views
 {
     public class ProtectContent : JamesContent
     {

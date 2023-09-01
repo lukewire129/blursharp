@@ -1,6 +1,6 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/BlurSharp.Protect;component/Themes/Views/ProtectContent.xaml"/>
+        <ResourceDictionary Source="/BlurSharp.Protect;component/Themes/Units/DirectoryTextBox.xaml" />
+        <ResourceDictionary Source="/BlurSharp.Protect;component/Themes/Views/ProtectContent.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -1,7 +1,7 @@
 ﻿using Jamesnet.Wpf.Controls;
 using System.Windows;
 
-namespace BlurSharp.Main.UI.Views
+namespace BlurSharp.Setting.UI.Views
 {
     public class SettingContent : JamesContent
     {
