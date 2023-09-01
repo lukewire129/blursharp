@@ -7,9 +7,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:DirectoryTextBox}">
-                    <james:JamesGrid Columns="*, 3*" Rows="*">
-                        <TextBlock Text="{Binding Content}" />
-                        <TextBox />
+                    <james:JamesGrid Columns="auto, auto" Rows="*">
+                        <Label Width="150" Content="{TemplateBinding Content}"  Foreground="White"/>
+                        <TextBox Width="600" />
                     </james:JamesGrid>
                 </ControlTemplate>
             </Setter.Value>

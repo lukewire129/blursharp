@@ -7,13 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Themes\Units\" />
-    <Folder Include="UI\Units\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
-    <PackageReference Include="VerticalTabControl" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

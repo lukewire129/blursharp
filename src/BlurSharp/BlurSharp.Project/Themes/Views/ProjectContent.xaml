@@ -1,8 +1,9 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:units="clr-namespace:BlurSharp.ProjectContent.UI.Units"
-    xmlns:views="clr-namespace:BlurSharp.ProjectContent.UI.Views">
+    xmlns:jaems="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
+    xmlns:units="clr-namespace:BlurSharp.Project.UI.Units"
+    xmlns:views="clr-namespace:BlurSharp.Project.UI.Views">
     <Style TargetType="{x:Type views:ProjectContent}">
         <Setter Property="Template">
             <Setter.Value>
@@ -11,7 +12,10 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <units:DirectoryTextBox Content="Base Directory" />
+                        <jaems:JamesGrid Columns="*" Rows="auto, auto">
+                            <units:DirectoryTextBox Height="30" Content="Base Directory" />
+                            <units:DirectoryTextBox Height="30" Content="Output Directory" />
+                        </jaems:JamesGrid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

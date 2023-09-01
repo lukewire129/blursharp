@@ -1,6 +1,7 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/BlurSharp.Main;component/Themes/Views/MainContent.xaml"/>
+        <ResourceDictionary Source="/BlurSharp.Main;component/Themes/Units/TabItem.xaml" />
+        <ResourceDictionary Source="/BlurSharp.Main;component/Themes/Units/Tab.xaml" />
+        <ResourceDictionary Source="/BlurSharp.Main;component/Themes/Views/MainContent.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

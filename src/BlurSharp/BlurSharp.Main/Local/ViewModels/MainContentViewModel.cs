@@ -1,42 +1,52 @@
 ﻿using BlurSharp.Core.ViewModels;
 using BlurSharp.Main.Local.Model;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Controls;
 using Prism.Ioc;
 using Prism.Regions;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace BlurSharp.Main.Local.ViewModels
 {
     public partial class MainContentViewModel : BaseViewModel, IViewLoadable
     {
         [ObservableProperty]
-        ObservableCollection<ContentModel> contentModels;
+        private ObservableCollection<TabModel> _tabs;
         public MainContentViewModel(IContainerProvider containerProvider,
-                                IRegionManager regionManager) :base(containerProvider, regionManager) {
-            this.ContentModels = new ()
+                                    IRegionManager regionManager) :base(containerProvider, regionManager) {
+            this.Tabs = new ()
             {
-                new ContentModel ()
+                new TabModel ()
                 {
-                    Name = "PROJECT",
-                    Content = this._containerProvider.Resolve<IViewable> ("ProjectContent")
+                    Name = "Project"
                 },
-                new ContentModel ()
+                new TabModel ()
                 {
-                    Name = "OPTION",
-                    Content = this._containerProvider.Resolve<IViewable> ("SettingContent")
+                    Name = "Setting"
                 },
-                new ContentModel ()
+                new TabModel ()
                 {
-                    Name = "PROTECT",
-                    Content = this._containerProvider.Resolve<IViewable> ("ProtectContent")
+                    Name = "Protect"
                 }
             };
         }
 
         public void OnLoaded(IViewable view)
         {
+            this.Select (this.Tabs.First ());
+        }
+        [RelayCommand]
+        private void Select(TabModel tabModel)
+        {
+            if(this.Tabs.FirstOrDefault (x => x.IsSelected == true) is TabModel item)
+            {
+                item.IsSelected = false;
+            }
 
+            tabModel.IsSelected = true;
+            this.ImportContent ("TabRegion", $"{tabModel.Name}Content");
         }
     }
 }
