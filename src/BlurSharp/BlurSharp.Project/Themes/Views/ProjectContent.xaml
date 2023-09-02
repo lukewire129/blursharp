@@ -13,8 +13,14 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
                         <jaems:JamesGrid Columns="*" Rows="auto, auto">
-                            <units:DirectoryTextBox Height="30" Content="Base Directory" />
-                            <units:DirectoryTextBox Height="30" Content="Output Directory" />
+                            <units:DirectoryTextBox
+                                Height="30"
+                                Content="Base Directory"
+                                DataContext="{Binding Base}" />
+                            <units:DirectoryTextBox
+                                Height="30"
+                                Content="Output Directory"
+                                DataContext="{Binding Output}" />
                         </jaems:JamesGrid>
                     </Border>
                 </ControlTemplate>
