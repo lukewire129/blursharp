@@ -12,8 +12,8 @@
                             Width="150"
                             Content="{TemplateBinding Content}"
                             Foreground="White" />
-                        <TextBox Width="600" Text="{Binding Path}" />
-                        <Button Command="{Binding SearchCommand}" />
+                        <TextBox Width="800" Text="{Binding PathDirectory}" />
+                        <Button Command="{Binding SearchCommand}" Width="100" />
                     </james:JamesGrid>
                 </ControlTemplate>
             </Setter.Value>

@@ -1,13 +1,12 @@
-﻿using BlurSharp.Core.ViewModels;
+﻿using System.Collections.ObjectModel;
+using BlurSharp.Core.ViewModels;
 using BlurSharp.Main.Local.Model;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Controls;
 using Prism.Ioc;
 using Prism.Regions;
-using System.Collections.ObjectModel;
 using System.Linq;
-
 namespace BlurSharp.Main.Local.ViewModels
 {
     public partial class MainContentViewModel : BaseViewModel, IViewLoadable
@@ -16,7 +15,7 @@ namespace BlurSharp.Main.Local.ViewModels
         private ObservableCollection<TabModel> _tabs;
         public MainContentViewModel(IContainerProvider containerProvider,
                                     IRegionManager regionManager) :base(containerProvider, regionManager) {
-            this.Tabs = new ()
+            this.Tabs = new ObservableCollection<TabModel>()
             {
                 new TabModel ()
                 {
@@ -37,6 +36,7 @@ namespace BlurSharp.Main.Local.ViewModels
         {
             this.Select (this.Tabs.First ());
         }
+        
         [RelayCommand]
         private void Select(TabModel tabModel)
         {

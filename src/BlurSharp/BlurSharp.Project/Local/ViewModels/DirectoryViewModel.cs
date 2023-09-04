@@ -1,6 +1,11 @@
-﻿using BlurSharp.Project.Local.Enums;
+﻿using System;
+using System.Diagnostics;
+using System.Windows;
+using BlurSharp.Project.Local.Enums;
+using BlurSharp.Project.Local.Messenger.EventArgs;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Win32;
 
 namespace BlurSharp.Project.Local.ViewModels
@@ -14,7 +19,7 @@ namespace BlurSharp.Project.Local.ViewModels
         }
 
         [ObservableProperty]
-        private string _path;
+        private string _pathDirectory;
 
 
         [RelayCommand]
@@ -23,8 +28,16 @@ namespace BlurSharp.Project.Local.ViewModels
             OpenFileDialog ofd = GetOFD ();
             if (ofd.ShowDialog () == false)
                 return;
+            
+            PathDirectory = System.IO.Path.GetDirectoryName(ofd.FileName);
 
-            Path = ofd.FileName;
+            if (Type == DirectoryType.BASE)
+            {
+                WeakReferenceMessenger.Default.Send(new FolderDirectory()
+                {
+                    DirectoryPath = this.PathDirectory
+                });
+            }
         }
 
 
