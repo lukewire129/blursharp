@@ -4,6 +4,9 @@
     xmlns:jaems="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
     xmlns:units="clr-namespace:BlurSharp.Project.UI.Units"
     xmlns:views="clr-namespace:BlurSharp.Project.UI.Views">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/CommonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <Style TargetType="{x:Type views:ProjectContent}">
         <Setter Property="Template">
             <Setter.Value>
@@ -12,7 +15,7 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <jaems:JamesGrid Columns="*" Rows="auto, auto">
+                        <jaems:JamesGrid Columns="*" Rows="auto, auto, auto">
                             <units:DirectoryTextBox
                                 Height="30"
                                 Content="Base Directory"
@@ -21,6 +24,11 @@
                                 Height="30"
                                 Content="Output Directory"
                                 DataContext="{Binding Output}" />
+                            <jaems:JamesGrid Columns="auto, auto, auto, auto" Rows="*" Height="30">
+                                <Label Content="Sed :" Style="{StaticResource TitleLabel}"/>
+                                <units:RoundTextBox Width="500"/>
+                                <CheckBox VerticalAlignment="Center" Content="Generate Debug Symbols" Foreground="White"/>
+                            </jaems:JamesGrid>
                         </jaems:JamesGrid>
                     </Border>
                 </ControlTemplate>

@@ -1,13 +1,12 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace BlurSharp.Project.UI.Units
+namespace BlurSharp.Project.UI.Units;
+
+public class DirectoryTextBox : ContentControl
 {
-    public class DirectoryTextBox : ContentControl
+    static DirectoryTextBox()
     {
-        static DirectoryTextBox()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata (typeof (DirectoryTextBox), new FrameworkPropertyMetadata (typeof (DirectoryTextBox)));
-        }
+        DefaultStyleKeyProperty.OverrideMetadata (typeof (DirectoryTextBox), new FrameworkPropertyMetadata (typeof (DirectoryTextBox)));
     }
 }
