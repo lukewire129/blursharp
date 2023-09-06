@@ -2,7 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/CommonStyle.xaml" />
+        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/FileListBox.xaml"/>
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/RoundTextBox.xaml" />
+        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/SedTextBox.xaml"/>
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/DirectoryTextBox.xaml" />
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Views/ProjectContent.xaml" />
     </ResourceDictionary.MergedDictionaries>
