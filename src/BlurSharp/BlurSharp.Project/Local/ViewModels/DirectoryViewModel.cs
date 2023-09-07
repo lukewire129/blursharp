@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Windows;
+﻿using System.IO;
 using BlurSharp.Project.Local.Enums;
 using BlurSharp.Project.Local.Messenger.EventArgs;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -12,41 +10,44 @@ namespace BlurSharp.Project.Local.ViewModels
 {
     public partial class DirectoryViewModel : ObservableObject
     {
-        public DirectoryType Type { get; }
+        private DirectoryType Type { get; }
+
         public DirectoryViewModel(DirectoryType type)
         {
             this.Type = type;
         }
-
-        [ObservableProperty]
-        private string _pathDirectory;
-
-
+        [ObservableProperty] private string _pathDirectory;
         [RelayCommand]
         private void Search()
         {
-            OpenFileDialog ofd = GetOFD ();
-            if (ofd.ShowDialog () == false)
+            OpenFileDialog ofd = OpenFileDialogOption();
+            if (ofd.ShowDialog() == false)
                 return;
-            
-            PathDirectory = System.IO.Path.GetDirectoryName(ofd.FileName);
 
-            if (Type == DirectoryType.BASE)
+            if (IsPathDirectoryNotice(ofd.FileName))
+                return;
+
+            WeakReferenceMessenger.Default.Send(new FolderDirectory()
             {
-                WeakReferenceMessenger.Default.Send(new FolderDirectory()
-                {
-                    DirectoryPath = this.PathDirectory
-                });
-            }
+                DirectoryPath = this.PathDirectory
+            });
         }
 
-
-        private OpenFileDialog GetOFD()
+        private OpenFileDialog OpenFileDialogOption() => new()
         {
-            return new OpenFileDialog ()
-            {
-                Multiselect = false
-            };
+            Multiselect = false
+        };
+
+        private bool IsPathDirectoryNotice(string fileNames)
+        {
+            this.PathDirectory = Path.GetDirectoryName(fileNames);
+            if (this.PathDirectory == null)
+                return false;
+
+            if (this.Type == DirectoryType.OUTPUT)
+                return false;
+
+            return true;
         }
     }
 }
