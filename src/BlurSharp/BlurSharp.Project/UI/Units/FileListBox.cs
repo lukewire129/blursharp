@@ -9,4 +9,9 @@ public class FileListBox : ListBox
     {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(FileListBox), new FrameworkPropertyMetadata(typeof(FileListBox)));;
     }
+
+    protected override DependencyObject GetContainerForItemOverride()
+    {
+        return new FileListItem();
+    }
 }

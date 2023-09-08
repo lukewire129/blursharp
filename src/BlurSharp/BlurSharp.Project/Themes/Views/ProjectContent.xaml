@@ -22,7 +22,7 @@
                                 Content="Output Directory"
                                 DataContext="{Binding Output}" Margin="0,0,0,10"/>
                             <units:SedTextBox Height="30" Margin="0,0,0,20"/>
-                            <units:FileListBox/>
+                            <units:FileListBox DataContext="{Binding ObfuscationFile}"/>
                         </jaems:JamesGrid>
                     </Border>
                 </ControlTemplate>

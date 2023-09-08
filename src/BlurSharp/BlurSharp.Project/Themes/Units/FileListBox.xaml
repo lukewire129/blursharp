@@ -8,11 +8,13 @@
                 <ControlTemplate TargetType="{x:Type units:FileListBox}">
                     <james:JamesGrid Columns="*, auto" Rows="*">
                         <Border CornerRadius="3" Background="#2b2b2b" Margin="10 , 0">
-                            
+                            <ScrollViewer>
+                                <ItemsPresenter/>
+                            </ScrollViewer>
                         </Border>
-                        <james:JamesGrid Orientation="Vertical" Rows="auto, auto, auto" Columns="50">
-                            <Button Content="+"/>
-                            <Button Content="-"/>
+                        <james:JamesGrid Orientation="Vertical" Rows="auto, auto, auto" Columns="30">
+                            <Button Content="+" Height="30" Cursor="Hand"/>
+                            <Button Content="-" Height="30" Cursor="Hand"/>
                         </james:JamesGrid>
                     </james:JamesGrid>
                 </ControlTemplate>
