@@ -3,6 +3,7 @@
                     xmlns:units="clr-namespace:BlurSharp.Project.UI.Units"
                     xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf">
     <Style TargetType="{x:Type units:FileListBox}">
+        <Setter Property="ItemsSource" Value="{Binding ObfuscationFiles}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:FileListBox}">
@@ -13,7 +14,9 @@
                             </ScrollViewer>
                         </Border>
                         <james:JamesGrid Orientation="Vertical" Rows="auto, auto, auto" Columns="30">
-                            <Button Content="+" Height="30" Cursor="Hand"/>
+                            <Button Content="+" Height="30" Cursor="Hand" 
+                                    Command="{Binding AddFileCommand}" 
+                                    CommandParameter="{Binding Path=DataContext.Base.PathDirectory, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type james:JamesContent}}}"/>
                             <Button Content="-" Height="30" Cursor="Hand"/>
                         </james:JamesGrid>
                     </james:JamesGrid>

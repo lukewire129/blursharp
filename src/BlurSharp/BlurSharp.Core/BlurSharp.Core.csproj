@@ -11,4 +11,13 @@
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
   </ItemGroup>
 
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj" />
+    <ProjectReference Include="..\Confuser.Protections\Confuser.Protections.csproj" />
+    <ProjectReference Include="..\Confuser.Renamer\Confuser.Renamer.csproj" />
+  </ItemGroup>
+
 </Project>

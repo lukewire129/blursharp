@@ -2,13 +2,16 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:BlurSharp.Project.UI.Units"
                     xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="CommonStyle.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
     <Style TargetType="{x:Type units:FileListItem}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:FileListItem}">
                     <james:JamesGrid Columns="auto, auto" Rows="*">
-                        <TextBlock Text="{Binding Text}"/>
-                        <TextBlock Text="{Binding Path}"/>
+                        <Label Content="{Binding AssemblyName}" Style="{StaticResource BaseLabel}"/>
+                        <Label Content="{Binding RelativePathFile}" Style="{StaticResource BaseLabel}"/>
                     </james:JamesGrid>
                 </ControlTemplate>
             </Setter.Value>

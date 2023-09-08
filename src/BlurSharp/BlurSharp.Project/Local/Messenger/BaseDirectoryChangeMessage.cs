@@ -7,5 +7,6 @@ public class BaseDirectoryChangeMessage : ValueChangedMessage<FolderDirectory>
 {
     public BaseDirectoryChangeMessage(FolderDirectory value) : base(value)
     {
+        
     }
 }

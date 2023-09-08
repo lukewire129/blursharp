@@ -11,4 +11,9 @@
   </ItemGroup>
 
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using BlurSharp.Project.Local.Enums;
+using BlurSharp.Project.Local.Messenger;
 using BlurSharp.Project.Local.Messenger.EventArgs;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -15,6 +16,16 @@ namespace BlurSharp.Project.Local.ViewModels
         public DirectoryViewModel(DirectoryType type)
         {
             this.Type = type;
+            if (this.Type == DirectoryType.OUTPUT)
+                return;
+            
+            WeakReferenceMessenger.Default.Register<DirectoryViewModel, BaseDirectoryRequestMessage>(this, (r, m) =>
+            {
+                // Assume that "CurrentUser" is a private member in our viewmodel.
+                // As before, we're accessing it through the recipient passed as
+                // input to the handler, to avoid capturing "this" in the delegate.
+                m.Reply(r.GetMessageType());
+            });
         }
         [ObservableProperty] private string _pathDirectory;
         [RelayCommand]
@@ -27,10 +38,7 @@ namespace BlurSharp.Project.Local.ViewModels
             if (IsPathDirectoryNotice(ofd.FileName))
                 return;
 
-            WeakReferenceMessenger.Default.Send(new FolderDirectory()
-            {
-                DirectoryPath = this.PathDirectory
-            });
+            WeakReferenceMessenger.Default.Send(GetMessageType());
         }
 
         private OpenFileDialog OpenFileDialogOption() => new()
@@ -38,6 +46,10 @@ namespace BlurSharp.Project.Local.ViewModels
             Multiselect = false
         };
 
+        private FolderDirectory GetMessageType() => new FolderDirectory()
+        {
+            DirectoryPath = this.PathDirectory
+        };
         private bool IsPathDirectoryNotice(string fileNames)
         {
             this.PathDirectory = Path.GetDirectoryName(fileNames);
