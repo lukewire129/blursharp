@@ -18,6 +18,7 @@
                                     Command="{Binding AddFileCommand}" 
                                     CommandParameter="{Binding Path=DataContext.Base.PathDirectory, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type james:JamesContent}}}"/>
                             <Button Content="-" Height="30" Cursor="Hand"/>
+                            <Button Content="Option" Height="30" Cursor="Hand"/>
                         </james:JamesGrid>
                     </james:JamesGrid>
                 </ControlTemplate>
