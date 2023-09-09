@@ -1,5 +1,5 @@
 # Blursharp
-https://github.com/mkaring/ConfuserEx의 기능을 개선과 UI 재해석을 위해 만들고 있는 프로젝트입니다.
+https://github.com/mkaring/ConfuserEx의 기능 개선과 UI 재해석을 위해 만들고 있는 프로젝트입니다.
 
 목표
 -
