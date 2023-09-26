@@ -1,28 +1,24 @@
-﻿using System;
-using System.Reflection;
-using System.Threading;
-using BlurSharp.Project.Local.Messenger;
-using BlurSharp.Project.Local.Messenger.EventArgs;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Messaging;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Jamesnet.Wpf.Controls;
 using Jamesnet.Wpf.Mvvm;
+using System.Reflection;
 
-namespace BlurSharp.Project.Local.Models;
+namespace BlurSharp.Core.Local.Models;
 
 public partial class FileModel : ObservableBase 
-{   
+{
+    public IconType IconType { get; set; }
     [ObservableProperty] private string _simpleName;
     [ObservableProperty] private string _assemblyName;
     [ObservableProperty] private string _relativePathFile;
     private readonly string _fullPath;
-    
-    public FileModel(string fullPath)
+    public FileModel(string fullPath, string rootPath)
     {
         this._fullPath = fullPath;
         try
         {
-            FolderDirectory directory = WeakReferenceMessenger.Default.Send<BaseDirectoryRequestMessage>();
-            RelativePathFile = Confuser.Core.Utils.GetRelativePath(this._fullPath, directory.DirectoryPath) ?? this._fullPath;
+
+            RelativePathFile = Confuser.Core.Utils.GetRelativePath(this._fullPath, rootPath) ?? this._fullPath;
         }
         catch 
         {

@@ -3,21 +3,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:units="clr-namespace:BlurSharp.Main.UI.Units">
     <Style TargetType="{x:Type units:TabItem}">
-        <Setter Property="SelectCommand" Value="{Binding Path=DataContext.SelectCommand,RelativeSource={RelativeSource AncestorType={x:Type units:Tab}}}"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="White"/>
-        <Setter Property="Width" Value="100"/>
-        <Setter Property="Height" Value="30"/>
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="SelectCommand" Value="{Binding Path=DataContext.SelectCommand, RelativeSource={RelativeSource AncestorType={x:Type units:Tab}}}" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Background" Value="Transparent" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:TabItem}">
                     <Border
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}">
-                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+                        Margin="10"
+                        Padding="5"
+                        Background="{TemplateBinding Background}">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Foreground="White"
+                            Text="{Binding Name}" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

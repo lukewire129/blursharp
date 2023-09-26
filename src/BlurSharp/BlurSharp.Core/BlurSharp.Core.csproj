@@ -8,13 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.41" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.44" />
   </ItemGroup>
 
 
 
 
   <ItemGroup>
+    <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
     <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj" />
     <ProjectReference Include="..\Confuser.Protections\Confuser.Protections.csproj" />
     <ProjectReference Include="..\Confuser.Renamer\Confuser.Renamer.csproj" />

@@ -1,26 +1,27 @@
-﻿using BlurSharp.Project.Local.Enums;
-using BlurSharp.Project.Local.Messenger.EventArgs;
-using CommunityToolkit.Mvvm.Messaging;
+﻿using BlurSharp.Core.Local;
+using BlurSharp.Core.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Controls;
 using Jamesnet.Wpf.Mvvm;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using System.Collections.ObjectModel;
 
 namespace BlurSharp.Project.Local.ViewModels
 {
     public partial class ProjectContentViewModel :ObservableBase, IViewLoadable
     {
-        public DirectoryViewModel Base { get; set; }
-        public DirectoryViewModel Output { get; set; }
+        private readonly FileService _fileService;
+
         public ObfuscationFileViewModel ObfuscationFile { get; set; }
-        public ProjectContentViewModel()
+
+        [ObservableProperty] private ObservableCollection<Folderinfo> _files;
+        public ProjectContentViewModel(FileService fileService)
         {
-            this.Base = new (DirectoryType.BASE);
-            this.Output = new (DirectoryType.OUTPUT);
             this.ObfuscationFile = new();
-            
-            WeakReferenceMessenger.Default.Register<FolderDirectory>(this, (r, data) =>
-            {
-                Output.PathDirectory = $"{data.DirectoryPath}\\Confuser";
-            });
+
+            this.Files = new ();
+            this._fileService = fileService;
         }
 
         public void OnLoaded(IViewable view)
@@ -33,5 +34,19 @@ namespace BlurSharp.Project.Local.ViewModels
         {
 
         }
+
+        [RelayCommand]
+        private void OpenDialog()
+        {
+            var ofd = this.GetOpenFileDialogSet ();
+
+            if (ofd.ShowDialog () != CommonFileDialogResult.Ok)
+                return;
+            this._fileService.TryRefreshFiles (this.Files, ofd.FileName);
+        }
+        private CommonOpenFileDialog GetOpenFileDialogSet() => new CommonOpenFileDialog ()
+        {
+            IsFolderPicker = true
+        };
     }
 }

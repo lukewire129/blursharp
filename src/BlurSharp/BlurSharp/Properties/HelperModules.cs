@@ -1,4 +1,5 @@
-﻿using Prism.Ioc;
+﻿using BlurSharp.Core.Local;
+using Prism.Ioc;
 using Prism.Modularity;
 
 namespace BlurSharp.Properties
@@ -11,6 +12,7 @@ namespace BlurSharp.Properties
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<FileService> ();
         }
     }
 }

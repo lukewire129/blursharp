@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace BlurSharp.Project.UI.Units;
 
-public class FileListItem : ContentControl
+public class FileListItem : ListBoxItem
 {
     static FileListItem()
     {

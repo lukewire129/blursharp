@@ -1,9 +1,9 @@
-﻿using BlurSharp.Support.UI.Units;
+﻿using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace BlurSharp.Forms.UI.Views
 {
-    public class BlurSharpWindow : DarkWindow
+    public class BlurSharpWindow : DarkThemeWindow
     {
         static BlurSharpWindow()
         {
