@@ -16,7 +16,6 @@
     <ProjectReference Include="..\BlurSharp.Main\BlurSharp.Main.csproj" />
     <ProjectReference Include="..\BlurSharp.Project\BlurSharp.Project.csproj" />
     <ProjectReference Include="..\BlurSharp.Protect\BlurSharp.Protect.csproj" />
-    <ProjectReference Include="..\BlurSharp.Setting\BlurSharp.Setting.csproj" />
   </ItemGroup>
 
 </Project>

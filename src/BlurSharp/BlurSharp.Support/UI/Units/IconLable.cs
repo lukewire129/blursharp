@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace BlurSharp.Project.UI.Units
+namespace BlurSharp.Support.UI.Units
 {
     public class IconLable : Button
     {

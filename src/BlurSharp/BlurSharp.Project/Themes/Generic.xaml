@@ -3,14 +3,12 @@
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/RoundTextBox.xaml" />
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/SeedTextBox.xaml" />
 
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/IconLable.xaml" />
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/FileListItem.xaml" />
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/FileListBox.xaml" />
+        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/DropFileListItem.xaml" />
+
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/ExpandButton.xaml" />
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/FolderTreeItem.xaml" />
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/FolderTreeView.xaml" />
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/ExplorerComponent.xaml" />
+        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Views/FolderExplorerContent.xaml" />
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Views/ProjectContent.xaml" />
     </ResourceDictionary.MergedDictionaries>
-
 </ResourceDictionary>

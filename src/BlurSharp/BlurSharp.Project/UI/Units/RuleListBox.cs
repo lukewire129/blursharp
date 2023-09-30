@@ -1,9 +1,9 @@
-﻿using System.Windows;
-using System.Windows.Controls;
+﻿using BlurSharp.Support.UI.Units;
+using System.Windows;
 
 namespace BlurSharp.Project.UI.Units
 {
-    public class RuleListBox : ListBox
+    public class RuleListBox : FileListBox
     {
         static RuleListBox()
         {

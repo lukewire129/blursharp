@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Local\Messenger\**" />
+    <Compile Remove="Local\Models\**" />
+    <EmbeddedResource Remove="Local\Messenger\**" />
+    <EmbeddedResource Remove="Local\Models\**" />
+    <None Remove="Local\Messenger\**" />
+    <None Remove="Local\Models\**" />
+    <Page Remove="Local\Messenger\**" />
+    <Page Remove="Local\Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.44" />
     <PackageReference Include="WindowsAPICodePack" Version="7.0.4" />
   </ItemGroup>
@@ -17,13 +28,6 @@
     <ProjectReference Include="..\BlurSharp.Core\BlurSharp.Core.csproj" />
     <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
     <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj" />
-  </ItemGroup>
-
-
-
-  <ItemGroup>
-    <Folder Include="Local\Messenger\" />
-    <Folder Include="Local\Models\" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,22 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:based="clr-namespace:BlurSharp.Support.UI.Units;assembly=BlurSharp.Support"
     xmlns:jaems="https://jamesnet.dev/xaml/presentation"
     xmlns:units="clr-namespace:BlurSharp.Project.UI.Units"
     xmlns:views="clr-namespace:BlurSharp.Project.UI.Views">
+    <!--#region Component Style-->
+    <Style
+        x:Key="DropFileListBoxStyle"
+        BasedOn="{StaticResource {x:Type based:FileListBox}}"
+        TargetType="{x:Type units:DropFileListBox}" />
+
+    <Style
+        x:Key="RuleListBoxStyle"
+        BasedOn="{StaticResource {x:Type based:FileListBox}}"
+        TargetType="{x:Type units:DropFileListBox}" />
+    <!--#endregion-->
+
     <Style TargetType="{x:Type views:ProjectContent}">
         <Setter Property="Template">
             <Setter.Value>
@@ -14,11 +27,14 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
                         <jaems:JamesGrid Columns="450,1,*" Rows="*">
-                            <units:ExplorerComponent />
+                            <views:FolderExplorerContent />
                             <GridSplitter HorizontalAlignment="Stretch" Background="White" />
                             <jaems:JamesGrid Columns="*" Rows="auto, *, 1, 30,*">
                                 <units:SeedTextBox Margin="10,0,0,10" />
-                                <units:FileListBox DataContext="{Binding ObfuscationFile}" />
+                                <units:DropFileListBox
+                                    AddItemCommand="{Binding AddItemCommand}"
+                                    ItemsSource="{Binding ObfuscationFiles}"
+                                    Style="{StaticResource DropFileListBoxStyle}" />
                                 <GridSplitter HorizontalAlignment="Stretch" />
                                 <TextBlock
                                     Margin="10,5,0,0"

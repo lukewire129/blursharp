@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp.Main", "BlurSharp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp.Core", "BlurSharp.Core\BlurSharp.Core.csproj", "{E9C14B15-1F6C-49B1-8804-E3644A3C4C47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp.Setting", "BlurSharp.Setting\BlurSharp.Setting.csproj", "{90B0CA4B-BD47-4752-AA84-8C180E170B01}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp.Protect", "BlurSharp.Protect\BlurSharp.Protect.csproj", "{67125ADB-EDB2-4286-BB18-C2B133559A72}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlurSharp.Project", "BlurSharp.Project\BlurSharp.Project.csproj", "{748BA66D-E204-4A1C-8762-56DC5835A421}"
@@ -25,15 +23,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Studio", "Studio", "{21E29F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Based", "Based", "{F4BD47BA-B0C4-4054-A052-1E7946B932E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confuser.Core", "Confuser.Core\Confuser.Core.csproj", "{EF3EB96C-D81B-43E4-823D-6A488C6E716D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confuser.Core", "Confuser.Core\Confuser.Core.csproj", "{EF3EB96C-D81B-43E4-823D-6A488C6E716D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confuser.DynCipher", "Confuser.DynCipher\Confuser.DynCipher.csproj", "{C576E78E-AEEF-43FC-A5A2-8F19F3E293A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confuser.DynCipher", "Confuser.DynCipher\Confuser.DynCipher.csproj", "{C576E78E-AEEF-43FC-A5A2-8F19F3E293A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confuser.Protections", "Confuser.Protections\Confuser.Protections.csproj", "{63BF52ED-54C9-4D55-8D85-3A3F1D6C254A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confuser.Protections", "Confuser.Protections\Confuser.Protections.csproj", "{63BF52ED-54C9-4D55-8D85-3A3F1D6C254A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confuser.Renamer", "Confuser.Renamer\Confuser.Renamer.csproj", "{36C5F908-1AEE-4EEE-BC6A-5E3A554889EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confuser.Renamer", "Confuser.Renamer\Confuser.Renamer.csproj", "{36C5F908-1AEE-4EEE-BC6A-5E3A554889EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Confuser.Runtime", "Confuser.Runtime\Confuser.Runtime.csproj", "{AA4EFBEE-C2B2-4E18-826A-F6EDE840CD9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confuser.Runtime", "Confuser.Runtime\Confuser.Runtime.csproj", "{AA4EFBEE-C2B2-4E18-826A-F6EDE840CD9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +59,6 @@ Global
 		{E9C14B15-1F6C-49B1-8804-E3644A3C4C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9C14B15-1F6C-49B1-8804-E3644A3C4C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9C14B15-1F6C-49B1-8804-E3644A3C4C47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90B0CA4B-BD47-4752-AA84-8C180E170B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90B0CA4B-BD47-4752-AA84-8C180E170B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90B0CA4B-BD47-4752-AA84-8C180E170B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90B0CA4B-BD47-4752-AA84-8C180E170B01}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67125ADB-EDB2-4286-BB18-C2B133559A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67125ADB-EDB2-4286-BB18-C2B133559A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67125ADB-EDB2-4286-BB18-C2B133559A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -103,7 +97,6 @@ Global
 		{B8D7870F-821C-412A-A9DA-267E3F480319} = {F4BD47BA-B0C4-4054-A052-1E7946B932E1}
 		{3ECECCFB-F540-455C-9571-22964C310B8E} = {B2B1AB8B-2563-41E6-AC74-6385C03CBF57}
 		{E9C14B15-1F6C-49B1-8804-E3644A3C4C47} = {F4BD47BA-B0C4-4054-A052-1E7946B932E1}
-		{90B0CA4B-BD47-4752-AA84-8C180E170B01} = {B2B1AB8B-2563-41E6-AC74-6385C03CBF57}
 		{67125ADB-EDB2-4286-BB18-C2B133559A72} = {B2B1AB8B-2563-41E6-AC74-6385C03CBF57}
 		{748BA66D-E204-4A1C-8762-56DC5835A421} = {B2B1AB8B-2563-41E6-AC74-6385C03CBF57}
 		{EF3EB96C-D81B-43E4-823D-6A488C6E716D} = {F4BD47BA-B0C4-4054-A052-1E7946B932E1}

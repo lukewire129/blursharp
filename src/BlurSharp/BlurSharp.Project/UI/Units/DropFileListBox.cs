@@ -1,13 +1,13 @@
-﻿using BlurSharp.Core.Local.Models;
+﻿using System.Windows.Input;
+using System.Windows;
+using BlurSharp.Core.Local.Models;
 using BlurSharp.Core.Models;
 using System.IO;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
+using BlurSharp.Support.UI.Units;
 
 namespace BlurSharp.Project.UI.Units;
 
-public class FileListBox : ListBox
+public class DropFileListBox : FileListBox
 {
     public ICommand AddItemCommand
     {
@@ -16,22 +16,21 @@ public class FileListBox : ListBox
     }
 
     // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
-    public static readonly DependencyProperty AddItemCommandProperty =
-        DependencyProperty.Register ("AddItemCommand", typeof (ICommand), typeof (FileListBox), new PropertyMetadata (null));
+    public static readonly DependencyProperty AddItemCommandProperty;
 
-
-    static FileListBox()
+    static DropFileListBox()
     {
-        DefaultStyleKeyProperty.OverrideMetadata (typeof (FileListBox), new FrameworkPropertyMetadata (typeof (FileListBox)));
+        AddItemCommandProperty = DependencyProperty.Register ("AddItemCommand", typeof (ICommand), typeof (DropFileListBox), new PropertyMetadata (null));
+        DefaultStyleKeyProperty.OverrideMetadata (typeof (DropFileListBox), new FrameworkPropertyMetadata (typeof (DropFileListBox)));
     }
 
-    public FileListBox()
+    public DropFileListBox()
     {
         AllowDrop = true;
-        Drop += FileListBox_Drop;
+        Drop += DropFileListBox_Drop;
     }
 
-    private void FileListBox_Drop(object sender, DragEventArgs e)
+    private void DropFileListBox_Drop(object sender, DragEventArgs e)
     {
         if (e.Data.GetData (typeof (Folderinfo)) is Folderinfo fi)
         {
@@ -46,7 +45,7 @@ public class FileListBox : ListBox
     private string GetRootDirectoryPath(Folderinfo info)
     {
         string path = info.FullPath;
-        for (int i=0; i<=info.Depth; i++)
+        for (int i = 0; i <= info.Depth; i++)
         {
             path = Path.GetDirectoryName (path);
         }
@@ -54,6 +53,6 @@ public class FileListBox : ListBox
     }
     protected override DependencyObject GetContainerForItemOverride()
     {
-        return new FileListItem ();
+        return new DropFileListItem ();
     }
 }

@@ -10,14 +10,19 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:SeedTextBox}">
-                    <jaems:JamesGrid Columns="auto, auto, auto" Rows="*">
-                        <Label Content="Seed :" Foreground="White" />
-                        <units:RoundTextBox Width="500" />
-                        <CheckBox
-                            VerticalAlignment="Center"
-                            Content="Generate Debug Symbols"
-                            Foreground="White" />
-                    </jaems:JamesGrid>
+                    <Border Padding="10">
+                        <jaems:JamesGrid Columns="auto, auto, auto" Rows="*">
+                            <TextBlock
+                                FontSize="16"
+                                Foreground="White"
+                                Text="Seed" />
+                            <units:RoundTextBox Width="500" Margin="10,0" />
+                            <CheckBox
+                                VerticalAlignment="Center"
+                                Content="Generate Debug Symbols"
+                                Foreground="White" />
+                        </jaems:JamesGrid>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

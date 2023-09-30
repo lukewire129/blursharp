@@ -3,39 +3,38 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace BlurSharp.Project.UI.Units
+namespace BlurSharp.Project.UI.Units;
+
+public class FolderTreeView : TreeView
 {
-    public class FolderTreeView : TreeView
+    public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register ("SelectionCommand", typeof (ICommand), typeof (FolderTreeView));
+
+    static FolderTreeView()
     {
-        public static readonly DependencyProperty SelectionCommandProperty = DependencyProperty.Register ("SelectionCommand", typeof (ICommand), typeof (FolderTreeView));
+        DefaultStyleKeyProperty.OverrideMetadata (typeof (FolderTreeView), new FrameworkPropertyMetadata (typeof (FolderTreeView)));
+    }
 
-        static FolderTreeView()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata (typeof (FolderTreeView), new FrameworkPropertyMetadata (typeof (FolderTreeView)));
-        }
+    public ICommand SelectionCommand
+    {
+        get => (ICommand)GetValue (SelectionCommandProperty);
+        set => SetValue (SelectionCommandProperty, value);
+    }
 
-        public ICommand SelectionCommand
-        {
-            get => (ICommand)GetValue (SelectionCommandProperty);
-            set => SetValue (SelectionCommandProperty, value);
-        }
+    protected override DependencyObject GetContainerForItemOverride()
+    {
+        return new FolderTreeItem ();
+    }
 
-        protected override DependencyObject GetContainerForItemOverride()
-        {
-            return new FolderTreeItem ();
-        }
+    public FolderTreeView()
+    {
+        SelectedItemChanged += TreeView_SelectedItemChanged;
+    }
 
-        public FolderTreeView()
+    private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+    {
+        if (SelectedItem is Folderinfo item)
         {
-            SelectedItemChanged += TreeView_SelectedItemChanged;
-        }
-
-        private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-            if (SelectedItem is Folderinfo item)
-            {
-                SelectionCommand?.Execute (item);
-            }
+            SelectionCommand?.Execute (item);
         }
     }
 }
