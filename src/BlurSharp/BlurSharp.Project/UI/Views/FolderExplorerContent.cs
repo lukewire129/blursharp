@@ -1,13 +1,12 @@
 ﻿using Jamesnet.Wpf.Controls;
 using System.Windows;
 
-namespace BlurSharp.Project.UI.Views
+namespace BlurSharp.Project.UI.Views;
+
+public class FolderExplorerContent : JamesContent
 {
-    public class FolderExplorerContent : JamesContent
+    static FolderExplorerContent()
     {
-        static FolderExplorerContent()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(FolderExplorerContent), new FrameworkPropertyMetadata(typeof(FolderExplorerContent)));
-        }
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(FolderExplorerContent), new FrameworkPropertyMetadata(typeof(FolderExplorerContent)));
     }
 }
