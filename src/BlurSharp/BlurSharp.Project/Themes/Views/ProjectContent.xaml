@@ -16,9 +16,16 @@
                         <jaems:JamesGrid Columns="450,1,*" Rows="*">
                             <units:ExplorerComponent />
                             <GridSplitter HorizontalAlignment="Stretch" Background="White" />
-                            <jaems:JamesGrid Columns="*" Rows="auto, *">
-                                <units:SeedTextBox Margin="10,0,0,5" />
+                            <jaems:JamesGrid Columns="*" Rows="auto, *, 1, 30,*">
+                                <units:SeedTextBox Margin="10,0,0,10" />
                                 <units:FileListBox DataContext="{Binding ObfuscationFile}" />
+                                <GridSplitter HorizontalAlignment="Stretch" />
+                                <TextBlock
+                                    Margin="10,5,0,0"
+                                    FontSize="16"
+                                    Foreground="White"
+                                    Text="SETTINGS" />
+                                <units:RuleListBox />
                             </jaems:JamesGrid>
                         </jaems:JamesGrid>
                     </Border>
