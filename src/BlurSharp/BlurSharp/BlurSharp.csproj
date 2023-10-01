@@ -8,12 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.44" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.50" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BlurSharp.Forms\BlurSharp.Forms.csproj" />
     <ProjectReference Include="..\BlurSharp.Main\BlurSharp.Main.csproj" />
+    <ProjectReference Include="..\BlurSharp.Project.FolderExplorer\BlurSharp.Project.FolderExplorer.csproj" />
     <ProjectReference Include="..\BlurSharp.Project\BlurSharp.Project.csproj" />
     <ProjectReference Include="..\BlurSharp.Protect\BlurSharp.Protect.csproj" />
   </ItemGroup>

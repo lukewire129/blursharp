@@ -18,14 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.44" />
-    <PackageReference Include="WindowsAPICodePack" Version="7.0.4" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.50" />
   </ItemGroup>
 
 
 
   <ItemGroup>
     <ProjectReference Include="..\BlurSharp.Core\BlurSharp.Core.csproj" />
+    <ProjectReference Include="..\BlurSharp.Project.FolderExplorer\BlurSharp.Project.FolderExplorer.csproj" />
     <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
     <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj" />
   </ItemGroup>

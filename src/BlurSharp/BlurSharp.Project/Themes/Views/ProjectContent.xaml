@@ -4,7 +4,11 @@
     xmlns:based="clr-namespace:BlurSharp.Support.UI.Units;assembly=BlurSharp.Support"
     xmlns:jaems="https://jamesnet.dev/xaml/presentation"
     xmlns:units="clr-namespace:BlurSharp.Project.UI.Units"
-    xmlns:views="clr-namespace:BlurSharp.Project.UI.Views">
+    xmlns:views="clr-namespace:BlurSharp.Project.UI.Views"
+    xmlns:views1="clr-namespace:BlurSharp.Project.FolderExplorer.UI.Views;assembly=BlurSharp.Project.FolderExplorer">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/CommonStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
     <!--#region Component Style-->
     <Style
         x:Key="DropFileListBoxStyle"
@@ -26,21 +30,21 @@
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}">
-                        <jaems:JamesGrid Columns="450,1,*" Rows="*">
-                            <views:FolderExplorerContent />
-                            <GridSplitter HorizontalAlignment="Stretch" Background="White" />
-                            <jaems:JamesGrid Columns="*" Rows="auto, *, 1, 30,*">
+                        <jaems:JamesGrid Columns="auto,auto,*" Rows="*">
+                            <views1:FolderExplorerContent MinWidth="50" />
+                            <GridSplitter Style="{StaticResource ColumnContentSpliterStyle}" />
+                            <jaems:JamesGrid Columns="*" Rows="auto, *, auto, 30,*">
                                 <units:SeedTextBox Margin="10,0,0,10" />
                                 <units:DropFileListBox
                                     AddItemCommand="{Binding AddItemCommand}"
                                     ItemsSource="{Binding ObfuscationFiles}"
                                     Style="{StaticResource DropFileListBoxStyle}" />
-                                <GridSplitter HorizontalAlignment="Stretch" />
+                                <GridSplitter Style="{StaticResource RowContentSpliterStyle}" />
                                 <TextBlock
                                     Margin="10,5,0,0"
                                     FontSize="16"
                                     Foreground="White"
-                                    Text="SETTINGS" />
+                                    Text="Rule Setting" />
                                 <units:RuleListBox />
                             </jaems:JamesGrid>
                         </jaems:JamesGrid>

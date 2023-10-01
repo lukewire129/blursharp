@@ -6,7 +6,7 @@ using Jamesnet.Wpf.Mvvm;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Collections.ObjectModel;
 
-namespace BlurSharp.Project.Local.ViewModels;
+namespace BlurSharp.Project.FolderExplorer.Local.ViewModels;
 
 public partial class FolderExplorerViewModel : ObservableBase
 {

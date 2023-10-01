@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:cnvts="clr-namespace:BlurSharp.Core.Converters;assembly=BlurSharp.Core"
     xmlns:james="https://jamesnet.dev/xaml/presentation"
-    xmlns:units="clr-namespace:BlurSharp.Project.UI.Units">
+    xmlns:units="clr-namespace:BlurSharp.Project.FolderExplorer.UI.Units">
     <Style TargetType="{x:Type units:FolderTreeItem}">
         <Setter Property="AllowDrop" Value="True" />
         <Setter Property="Background" Value="Transparent" />

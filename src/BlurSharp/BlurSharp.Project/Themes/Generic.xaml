@@ -1,14 +1,8 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/RoundTextBox.xaml" />
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/SeedTextBox.xaml" />
 
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/DropFileListItem.xaml" />
-
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/ExpandButton.xaml" />
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/FolderTreeItem.xaml" />
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Units/FolderTreeView.xaml" />
-        <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Views/FolderExplorerContent.xaml" />
         <ResourceDictionary Source="/BlurSharp.Project;component/Themes/Views/ProjectContent.xaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

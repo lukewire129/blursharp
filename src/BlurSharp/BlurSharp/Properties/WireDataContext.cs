@@ -2,6 +2,8 @@
 using BlurSharp.Forms.UI.Views;
 using BlurSharp.Main.Local.ViewModels;
 using BlurSharp.Main.UI.Views;
+using BlurSharp.Project.FolderExplorer.Local.ViewModels;
+using BlurSharp.Project.FolderExplorer.UI.Views;
 using BlurSharp.Project.Local.ViewModels;
 using BlurSharp.Project.UI.Views;
 using BlurSharp.Protect.UI.Views;

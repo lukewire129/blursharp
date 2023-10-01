@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confuser.Renamer", "Confuse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confuser.Runtime", "Confuser.Runtime\Confuser.Runtime.csproj", "{AA4EFBEE-C2B2-4E18-826A-F6EDE840CD9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlurSharp.Project.FolderExplorer", "BlurSharp.Project.FolderExplorer\BlurSharp.Project.FolderExplorer.csproj", "{9D32D500-CF81-4490-BCE0-FBA1D47901B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{AA4EFBEE-C2B2-4E18-826A-F6EDE840CD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA4EFBEE-C2B2-4E18-826A-F6EDE840CD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA4EFBEE-C2B2-4E18-826A-F6EDE840CD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D32D500-CF81-4490-BCE0-FBA1D47901B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D32D500-CF81-4490-BCE0-FBA1D47901B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D32D500-CF81-4490-BCE0-FBA1D47901B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D32D500-CF81-4490-BCE0-FBA1D47901B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +110,7 @@ Global
 		{63BF52ED-54C9-4D55-8D85-3A3F1D6C254A} = {F4BD47BA-B0C4-4054-A052-1E7946B932E1}
 		{36C5F908-1AEE-4EEE-BC6A-5E3A554889EB} = {F4BD47BA-B0C4-4054-A052-1E7946B932E1}
 		{AA4EFBEE-C2B2-4E18-826A-F6EDE840CD9A} = {F4BD47BA-B0C4-4054-A052-1E7946B932E1}
+		{9D32D500-CF81-4490-BCE0-FBA1D47901B4} = {B2B1AB8B-2563-41E6-AC74-6385C03CBF57}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {600448A1-A835-4152-A8F1-3C494BDA24BA}

@@ -3,18 +3,18 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace BlurSharp.Project.UI.Units;
+namespace BlurSharp.Project.FolderExplorer.UI.Units;
 
 public class FolderTreeItem : TreeViewItem
 {
     static FolderTreeItem()
     {
-        DefaultStyleKeyProperty.OverrideMetadata (typeof (FolderTreeItem), new FrameworkPropertyMetadata (typeof (FolderTreeItem)));
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(FolderTreeItem), new FrameworkPropertyMetadata(typeof(FolderTreeItem)));
     }
 
     public FolderTreeItem()
     {
-        DefaultStyleKey = typeof (FolderTreeItem);
+        DefaultStyleKey = typeof(FolderTreeItem);
         DragEnter += Treeview_DragEnter;
         DragLeave += Treeview_DragLeave;
         DragOver += Treeview_DragOver;
@@ -22,7 +22,7 @@ public class FolderTreeItem : TreeViewItem
 
     private void Treeview_DragOver(object sender, DragEventArgs e)
     {
-        if (e.Data.GetDataPresent (typeof (FolderTreeItem)))
+        if (e.Data.GetDataPresent(typeof(FolderTreeItem)))
         {
             e.Effects = DragDropEffects.Move;
         }
@@ -39,7 +39,7 @@ public class FolderTreeItem : TreeViewItem
 
     private void Treeview_DragEnter(object sender, DragEventArgs e)
     {
-        if (e.Data.GetDataPresent (typeof (FolderTreeItem)))
+        if (e.Data.GetDataPresent(typeof(FolderTreeItem)))
         {
             e.Effects = DragDropEffects.Move;
         }
@@ -50,18 +50,18 @@ public class FolderTreeItem : TreeViewItem
     }
     protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
     {
-        base.OnMouseLeftButtonDown (e);
+        base.OnMouseLeftButtonDown(e);
 
         if (e.OriginalSource is FrameworkElement fe)
         {
             if (((Folderinfo)fe.DataContext).IconType == Jamesnet.Wpf.Controls.IconType.Folder)
                 return;
-            DragDrop.DoDragDrop (this, fe.DataContext, DragDropEffects.Move);
+            DragDrop.DoDragDrop(this, fe.DataContext, DragDropEffects.Move);
         }
     }
 
     protected override DependencyObject GetContainerForItemOverride()
     {
-        return new FolderTreeItem ();
+        return new FolderTreeItem();
     }
 }
