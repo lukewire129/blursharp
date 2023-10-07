@@ -1,52 +1,34 @@
-﻿using BlurSharp.Core.Local;
-using BlurSharp.Core.Models;
+﻿using BlurSharp.Core.Local.Models;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Controls;
 using Jamesnet.Wpf.Mvvm;
-using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Collections.ObjectModel;
 
-namespace BlurSharp.Project.Local.ViewModels
+namespace BlurSharp.Project.Local.ViewModels;
+
+public partial class ProjectContentViewModel :ObservableBase, IViewLoadable
 {
-    public partial class ProjectContentViewModel :ObservableBase, IViewLoadable
+    [ObservableProperty] ObservableCollection<FileModel> _obfuscationFiles;
+    public ProjectContentViewModel()
     {
-        private readonly FileService _fileService;
+        this.ObfuscationFiles = new ();
+    }
 
-        public ObfuscationFileViewModel ObfuscationFile { get; set; }
+    public void OnLoaded(IViewable view)
+    {
+        this.Load ();    
+    }
 
-        [ObservableProperty] private ObservableCollection<Folderinfo> _files;
-        public ProjectContentViewModel(FileService fileService)
-        {
-            this.ObfuscationFile = new();
+    // TODO : Solution Open 시 업로드
+    public void Load()
+    {
 
-            this.Files = new ();
-            this._fileService = fileService;
-        }
+    }
 
-        public void OnLoaded(IViewable view)
-        {
-            this.Load ();    
-        }
-
-        // TODO : Solution Open 시 업로드
-        public void Load()
-        {
-
-        }
-
-        [RelayCommand]
-        private void OpenDialog()
-        {
-            var ofd = this.GetOpenFileDialogSet ();
-
-            if (ofd.ShowDialog () != CommonFileDialogResult.Ok)
-                return;
-            this._fileService.TryRefreshFiles (this.Files, ofd.FileName);
-        }
-        private CommonOpenFileDialog GetOpenFileDialogSet() => new CommonOpenFileDialog ()
-        {
-            IsFolderPicker = true
-        };
+    [RelayCommand]
+    void AddItem(FileModel fileModel)
+    {
+        this.ObfuscationFiles.Add (fileModel);
     }
 }

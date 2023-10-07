@@ -1,6 +1,0 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/BlurSharp.Setting;component/Themes/Views/SettingContent.xaml"/>
-    </ResourceDictionary.MergedDictionaries>
-</ResourceDictionary>

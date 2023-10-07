@@ -1,13 +1,12 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace BlurSharp.Support.UI.Units
+namespace BlurSharp.Support.UI.Units;
+
+public class DarkScrollViewer : ScrollViewer
 {
-    public class DarkScrollViewer : ScrollViewer
+    static DarkScrollViewer()
     {
-        static DarkScrollViewer()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata (typeof (DarkScrollViewer), new FrameworkPropertyMetadata (typeof (DarkScrollViewer)));
-        }
+        DefaultStyleKeyProperty.OverrideMetadata (typeof (DarkScrollViewer), new FrameworkPropertyMetadata (typeof (DarkScrollViewer)));
     }
 }
