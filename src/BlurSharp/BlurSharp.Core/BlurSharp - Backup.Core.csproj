@@ -2,28 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.63" />
-    <PackageReference Include="WindowsAPICodePack" Version="7.0.4" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.47" />
   </ItemGroup>
 
 
 
+
   <ItemGroup>
-    <ProjectReference Include="..\BlurSharp.Core\BlurSharp.Core.csproj" />
     <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
     <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj" />
-  </ItemGroup>
-
-
-
-  <ItemGroup>
-    <Folder Include="Local\Messenger\" />
-    <Folder Include="Local\Models\" />
+    <ProjectReference Include="..\Confuser.Protections\Confuser.Protections.csproj" />
+    <ProjectReference Include="..\Confuser.Renamer\Confuser.Renamer.csproj" />
   </ItemGroup>
 
 </Project>
