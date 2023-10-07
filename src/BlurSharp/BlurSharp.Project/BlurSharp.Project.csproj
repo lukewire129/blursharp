@@ -7,23 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.63" />
     <PackageReference Include="WindowsAPICodePack" Version="7.0.4" />
-=======
-    <Compile Remove="Local\Messenger\**" />
-    <Compile Remove="Local\Models\**" />
-    <EmbeddedResource Remove="Local\Messenger\**" />
-    <EmbeddedResource Remove="Local\Models\**" />
-    <None Remove="Local\Messenger\**" />
-    <None Remove="Local\Models\**" />
-    <Page Remove="Local\Messenger\**" />
-    <Page Remove="Local\Models\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.50" />
->>>>>>> f87243c73ce27185d074f28f6681ae3a064ccf1f
   </ItemGroup>
 
 
@@ -33,6 +18,13 @@
     <ProjectReference Include="..\BlurSharp.Project.FolderExplorer\BlurSharp.Project.FolderExplorer.csproj" />
     <ProjectReference Include="..\BlurSharp.Support\BlurSharp.Support.csproj" />
     <ProjectReference Include="..\Confuser.Core\Confuser.Core.csproj" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Folder Include="Local\Messenger\" />
+    <Folder Include="Local\Models\" />
   </ItemGroup>
 
 </Project>

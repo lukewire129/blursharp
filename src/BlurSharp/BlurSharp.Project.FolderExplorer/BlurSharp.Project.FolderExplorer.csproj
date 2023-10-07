@@ -7,16 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD:src/BlurSharp/BlurSharp.Setting/BlurSharp.Setting.csproj
     <Folder Include="UI\Units\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.63" />
-=======
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.50" />
     <PackageReference Include="WindowsAPICodePack" Version="7.0.4" />
->>>>>>> f87243c73ce27185d074f28f6681ae3a064ccf1f:src/BlurSharp/BlurSharp.Project.FolderExplorer/BlurSharp.Project.FolderExplorer.csproj
   </ItemGroup>
 
   <ItemGroup>
